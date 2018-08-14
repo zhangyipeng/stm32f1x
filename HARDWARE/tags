@@ -1,0 +1,148 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CheckSystemID	system_id.c	/^void CheckSystemID(void) {$/;"	f	signature:(void)
+CheckSystemID	system_id.h	/^void    CheckSystemID(void);$/;"	p	signature:(void)
+CommandBufferClear	command.c	/^void CommandBufferClear(void){$/;"	f	signature:(void)
+CommandBufferClear	command.h	/^void CommandBufferClear(void);$/;"	p	signature:(void)
+CommandResolution	command.c	/^void CommandResolution(void){$/;"	f	signature:(void)
+CommandResolution	command.h	/^void CommandResolution(void);$/;"	p	signature:(void)
+CommandRxEndUart1	command.c	/^void CommandRxEndUart1(void){$/;"	f	signature:(void)
+CommandRxEndUart1	command.h	/^void CommandRxEndUart1(void);$/;"	p	signature:(void)
+CommandRxEndUart2	command.c	/^void CommandRxEndUart2(void){$/;"	f	signature:(void)
+CommandRxEndUart2	command.h	/^void CommandRxEndUart2(void);$/;"	p	signature:(void)
+CommandRxEndUart4	command.c	/^void CommandRxEndUart4(void){$/;"	f	signature:(void)
+CommandRxEndUart4	command.h	/^void CommandRxEndUart4(void);$/;"	p	signature:(void)
+Get_Adc	adc.c	/^u16 Get_Adc(u8 ch){\/\/设置指定ADC的规则组通道，一个序列，采样时间$/;"	f	signature:(u8 ch)
+Get_Adc	adc.h	/^u16 Get_Adc(u8 ch);$/;"	p	signature:(u8 ch)
+KeyLongFlag	command.c	/^extern  uint8_t     KeyLongFlag;\/\/长按标志 2018-03-21$/;"	x
+LED_Init	led.c	/^void LED_Init(void){$/;"	f	signature:(void)
+LED_Init	led.h	/^void LED_Init(void);                                                         \/\/��ʼ��$/;"	p	signature:(void)
+MoveFlag	autoscan.c	/^extern uint8_t MoveFlag;$/;"	x
+MoveFlag	command.c	/^extern uint8_t  MoveFlag;$/;"	x
+MoveFlag	move.c	/^extern uint8_t MoveFlag;$/;"	x
+MoveFrePoint	command.c	/^extern uint8_t  MoveFrePoint;$/;"	x
+MoveLength	command.c	/^extern uint8_t  MoveLength;$/;"	x
+NVIC_Configuartion	system.c	/^void NVIC_Configuartion(void){$/;"	f	signature:(void)
+NVIC_Configuartion	system.h	/^void NVIC_Configuartion(void);$/;"	p	signature:(void)
+OutA	encoder.h	4;"	d
+OutB	encoder.h	5;"	d
+OutZ	encoder.h	6;"	d
+RCC_Configuration	system.c	/^void RCC_Configuration(void){$/;"	f	signature:(void)
+RCC_Configuration	system.h	/^void RCC_Configuration(void);$/;"	p	signature:(void)
+ReadSystemID	system_id.c	/^void ReadSystemID(void) {$/;"	f	signature:(void)
+ReadSystemID	system_id.h	/^void	ReadSystemID(void);$/;"	p	signature:(void)
+SPI1_FLASH_Init	spi_flash.c	/^void SPI1_FLASH_Init(void){$/;"	f	signature:(void)
+SPI1_FLASH_Init	spi_flash.h	/^void SPI1_FLASH_Init(void);$/;"	p	signature:(void)
+SPI1_FLASH_SendByte	spi_flash.c	/^u8 SPI1_FLASH_SendByte(uint8_t byte){$/;"	f	signature:(uint8_t byte)
+SPI1_FLASH_SendByte	spi_flash.h	/^u8 SPI1_FLASH_SendByte(uint8_t byte);$/;"	p	signature:(uint8_t byte)
+SPI2_Config	spi.c	/^void    SPI2_Config(void){$/;"	f	signature:(void)
+SPI2_Config	spi.h	/^void    SPI2_Config(void);$/;"	p	signature:(void)
+SPI2_FLASH_Init	spi_flash.c	/^void SPI2_FLASH_Init(void){$/;"	f	signature:(void)
+SPI2_FLASH_Init	spi_flash.h	/^void SPI2_FLASH_Init(void);$/;"	p	signature:(void)
+SPI2_FLASH_SendByte	spi_flash.c	/^u8 SPI2_FLASH_SendByte(uint8_t byte){$/;"	f	signature:(uint8_t byte)
+SPI2_FLASH_SendByte	spi_flash.h	/^u8 SPI2_FLASH_SendByte(uint8_t byte);$/;"	p	signature:(uint8_t byte)
+SPI2_WriteReadData	spi.c	/^uint8_t SPI2_WriteReadData(uint8_t dat){$/;"	f	signature:(uint8_t dat)
+SPI2_WriteReadData	spi.h	/^uint8_t SPI2_WriteReadData(uint8_t dat);$/;"	p	signature:(uint8_t dat)
+SPIx_FLASH_Init	spi_flash.c	/^void SPIx_FLASH_Init(void){$/;"	f	signature:(void)
+SPIx_FLASH_Init	spi_flash.h	/^void SPIx_FLASH_Init(void);$/;"	p	signature:(void)
+SPIx_FLASH_SendByte	spi_flash.c	/^u8 SPIx_FLASH_SendByte(uint8_t byte){$/;"	f	signature:(uint8_t byte)
+SPIx_FLASH_SendByte	spi_flash.h	/^u8 SPIx_FLASH_SendByte(uint8_t byte);$/;"	p	signature:(uint8_t byte)
+SystemCheck	system_id.c	/^extern uint8_t  SystemCheck;$/;"	x
+System_ID	command.c	/^extern uint8_t  System_ID[12];$/;"	x
+System_ID	system_id.c	/^extern uint8_t  System_ID[12];$/;"	x
+Usart_SendByte	rs485.c	/^static void Usart_SendByte( USART_TypeDef * pUSARTx, uint8_t ch )$/;"	f	file:	signature:( USART_TypeDef * pUSARTx, uint8_t ch )
+Usart_SendStr_length	rs485.c	/^void Usart_SendStr_length( USART_TypeDef * pUSARTx, uint8_t *str,uint32_t strlen )$/;"	f	signature:( USART_TypeDef * pUSARTx, uint8_t *str,uint32_t strlen )
+Usart_SendStr_length	rs485.h	/^void Usart_SendStr_length( USART_TypeDef * pUSARTx, uint8_t *str,uint32_t strlen );$/;"	p	signature:( USART_TypeDef * pUSARTx, uint8_t *str,uint32_t strlen )
+Usart_SendString	rs485.c	/^void Usart_SendString( USART_TypeDef * pUSARTx, char *str)$/;"	f	signature:( USART_TypeDef * pUSARTx, char *str)
+Usart_SendString	rs485.h	/^void Usart_SendString( USART_TypeDef * pUSARTx, char *str);$/;"	p	signature:( USART_TypeDef * pUSARTx, char *str)
+WheelIn	itr.h	4;"	d
+WheelMoveNum	command.c	/^extern uint8_t  WheelMoveNum;$/;"	x
+__COMMAND_H	command.h	8;"	d
+__LED_H	led.h	10;"	d
+_adc_H	adc.h	2;"	d
+_autoscan_H	autoscan.h	2;"	d
+_calculate_H	calculate.h	2;"	d
+_calibration_H	calibration.h	2;"	d
+_encoder_H	encoder.h	2;"	d
+_exti_H	exti.h	2;"	d
+_itr_H	itr.h	2;"	d
+_move_H	move.h	2;"	d
+_radio_H	radio.h	2;"	d
+_rs485_H	rs485.h	2;"	d
+_spi_H	spi.h	8;"	d
+_spi_flash_H	spi_flash.h	2;"	d
+_system_H	system.h	2;"	d
+_system_id_H	system_id.h	2;"	d
+_systick_H	systick.h	2;"	d
+_time_H	time.h	2;"	d
+_translate_H	translate.h	2;"	d
+_usart_H	usart.h	2;"	d
+_wifi_H	wifi.h	2;"	d
+adc_init	adc.c	/^void adc_init()$/;"	f
+adc_init	adc.h	/^void adc_init(void);$/;"	p	signature:(void)
+calibration	calibration.c	/^void calibration(void){$/;"	f	signature:(void)
+calibration	calibration.h	/^void calibration(void);$/;"	p	signature:(void)
+char2hex	calculate.c	/^int char2hex(const char *s,uint8_t qq,uint8_t number){$/;"	f	signature:(const char *s,uint8_t qq,uint8_t number)
+char2hex	calculate.h	/^int char2hex(const char *s,uint8_t qq,uint8_t number);$/;"	p	signature:(const char *s,uint8_t qq,uint8_t number)
+delay	command.c	/^extern uint32_t delay;$/;"	x
+delay_ms	systick.c	/^void    delay_ms(u16 i){$/;"	f	signature:(u16 i)
+delay_ms	systick.h	/^void    delay_ms(u16 i);$/;"	p	signature:(u16 i)
+delay_ns	systick.c	/^void delay_ns(__IO uint32_t i)$/;"	f	signature:(__IO uint32_t i)
+delay_ns	systick.h	/^void    delay_ns(__IO uint32_t i);$/;"	p	signature:(__IO uint32_t i)
+delay_us	systick.c	/^void    delay_us(u32 i){$/;"	f	signature:(u32 i)
+delay_us	systick.h	/^void    delay_us(u32 i);$/;"	p	signature:(u32 i)
+encoder_init	encoder.c	/^void encoder_init(){$/;"	f
+encoder_init	encoder.h	/^void encoder_init(void);       \/\/旋转编码器控制器初始化$/;"	p	signature:(void)
+exti_init	exti.c	/^void exti_init(){$/;"	f
+exti_init	exti.h	/^void exti_init(void);       \/\/外部中断初始化$/;"	p	signature:(void)
+itr_init	itr.c	/^void itr_init(){$/;"	f
+itr_init	itr.h	/^void itr_init(void);       \/\/光电开关初始化$/;"	p	signature:(void)
+key_in	exti.h	4;"	d
+meanAD	radio.c	/^int meanAD(uint8_t meantimes){$/;"	f	signature:(uint8_t meantimes)
+meanAD	radio.h	/^int meanAD(uint8_t meantimes);$/;"	p	signature:(uint8_t meantimes)
+move_2mm	move.c	/^void move_2mm(uint8_t p) {$/;"	f	signature:(uint8_t p)
+move_2mm	move.h	/^void    move_2mm(uint8_t p);$/;"	p	signature:(uint8_t p)
+move_5mm	move.c	/^void move_5mm(void) {$/;"	f	signature:(void)
+move_5mm	move.h	/^void    move_5mm(void);$/;"	p	signature:(void)
+normal_mode	autoscan.c	/^void normal_mode(void){$/;"	f	signature:(void)
+normal_mode	autoscan.h	/^void normal_mode(void);$/;"	p	signature:(void)
+pow2	calculate.c	/^int pow2(int x){$/;"	f	signature:(int x)
+pow2	calculate.h	/^int pow2(int);$/;"	p	signature:(int)
+readADC	radio.c	/^void readADC(void){$/;"	f	signature:(void)
+readADC	radio.h	/^void readADC(void);$/;"	p	signature:(void)
+rs485_init	rs485.c	/^void rs485_init(){$/;"	f
+rs485_init	rs485.h	/^void	rs485_init(void);$/;"	p	signature:(void)
+setDAC	radio.c	/^void setDAC(uint8_t *buf){$/;"	f	signature:(uint8_t *buf)
+setDAC	radio.h	/^void setDAC(uint8_t *buf);$/;"	p	signature:(uint8_t *buf)
+setHMC	radio.c	/^void setHMC(uint8_t *buf){$/;"	f	signature:(uint8_t *buf)
+setHMC	radio.h	/^void setHMC(uint8_t *buf);$/;"	p	signature:(uint8_t *buf)
+setPGA	radio.c	/^void setPGA(uint8_t *buf){$/;"	f	signature:(uint8_t *buf)
+setPGA	radio.h	/^void setPGA(uint8_t *buf);$/;"	p	signature:(uint8_t *buf)
+setPLL	radio.c	/^void setPLL(uint8_t *buf){$/;"	f	signature:(uint8_t *buf)
+setPLL	radio.h	/^void setPLL(uint8_t *buf);$/;"	p	signature:(uint8_t *buf)
+sys_rst	system.c	/^void sys_rst(void){$/;"	f	signature:(void)
+sys_rst	system.h	/^void sys_rst(void);$/;"	p	signature:(void)
+time_init	time.c	/^void    time_init(){$/;"	f
+time_init	time.h	/^void	time_init(void);$/;"	p	signature:(void)
+transdata	translate.c	/^void transdata(uint8_t row,uint8_t col){$/;"	f	signature:(uint8_t row,uint8_t col)
+transdata	translate.h	/^void transdata(uint8_t row,uint8_t col);$/;"	p	signature:(uint8_t row,uint8_t col)
+transdata_point	translate.c	/^void transdata_point(uint8_t p){$/;"	f	signature:(uint8_t p)
+transdata_point	translate.h	/^void transdata_point(uint8_t p);$/;"	p	signature:(uint8_t p)
+transdata_point_p1	translate.c	/^void transdata_point_p1(uint8_t p){$/;"	f	signature:(uint8_t p)
+transdata_point_p1	translate.h	/^void transdata_point_p1(uint8_t p);$/;"	p	signature:(uint8_t p)
+transdata_point_p2	translate.c	/^void transdata_point_p2(uint8_t p,uint8_t row,uint8_t col){$/;"	f	signature:(uint8_t p,uint8_t row,uint8_t col)
+transdata_point_p2	translate.h	/^void transdata_point_p2(uint8_t p,uint8_t row,uint8_t col);$/;"	p	signature:(uint8_t p,uint8_t row,uint8_t col)
+transdata_point_t	translate.c	/^void transdata_point_t(uint8_t p,uint8_t row,uint8_t col){$/;"	f	signature:(uint8_t p,uint8_t row,uint8_t col)
+transdata_point_t	translate.h	/^void transdata_point_t(uint8_t p,uint8_t row,uint8_t col);$/;"	p	signature:(uint8_t p,uint8_t row,uint8_t col)
+transdata_reverse	translate.c	/^void transdata_reverse(uint8_t row,uint8_t col){$/;"	f	signature:(uint8_t row,uint8_t col)
+transdata_reverse	translate.h	/^void transdata_reverse(uint8_t row,uint8_t col);$/;"	p	signature:(uint8_t row,uint8_t col)
+transdata_t	translate.c	/^void transdata_t(uint8_t row,uint8_t col){$/;"	f	signature:(uint8_t row,uint8_t col)
+transdata_t	translate.h	/^void transdata_t(uint8_t row,uint8_t col);$/;"	p	signature:(uint8_t row,uint8_t col)
+usart_init	usart.c	/^void usart_init(){$/;"	f
+usart_init	usart.h	/^void	usart_init(void);$/;"	p	signature:(void)
+wifi_init	wifi.c	/^void wifi_init(uint32_t baud){$/;"	f	signature:(uint32_t baud)
+wifi_init	wifi.h	/^void	wifi_init(uint32_t baud);$/;"	p	signature:(uint32_t baud)

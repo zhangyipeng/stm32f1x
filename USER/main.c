@@ -95,18 +95,18 @@ int main(void){
     LED_Init();
     usart_init();
     wifi_init(256000);
-    rs485_init();
+    /* rs485_init(); */
     adc_init();
     /* exti_init(); */
     /* itr_init(); */
-    time_init();
+    /* time_init(); */
     SPIx_FLASH_Init();
     SPI1_FLASH_Init();
     encoder_init();
 //    SPI2_FLASH_Init();
     SPI2_Config();
     sys_rst();
-    GPIO_ResetBits(GPIOC,GPIO_Pin_12);                                      //RS485收发控制使能，高发低收
+    /* GPIO_ResetBits(GPIOC,GPIO_Pin_12);                                      //RS485收发控制使能，高发低收 */
     /* ReadSystemID(); */
     /* CheckSystemID(); */
     /* if(FLASH_GetReadOutProtectionStatus()!=SET){//设置flash读保护 */
@@ -115,7 +115,7 @@ int main(void){
     /*     FLASH_ReadOutProtection(ENABLE); */
     /* } */
     while (1){
-        GPIO_ResetBits(GPIOC,GPIO_Pin_12);
+        /* GPIO_ResetBits(GPIOC,GPIO_Pin_12); */
         CommandRxEndUart1();
         CommandRxEndUart2();
         CommandRxEndUart4();

@@ -132,7 +132,7 @@ void EXTI1_IRQHandler(void){
 //				TxBuffer[0] = EncoderNum; 
 //				Usart_SendString(USART2,"$Size++\r\n");
 //				Usart_SendStr_length(USART2,TxBuffer,1);
-				transdata_point_t(MoveFrePoint,WheelMoveNum,EncoderNum);
+				transdata_point_p2(MoveFrePoint,WheelMoveNum,EncoderNum);
 			}else{
 				i++;
 			}

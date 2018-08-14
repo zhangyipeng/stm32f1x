@@ -194,7 +194,8 @@ void CommandResolution(void){
         delay_ms(10);
         MoveFrePoint = char2hex(CmdRxBuffer,13,1);
         WheelMoveNum = 0;//开始扫描时刻计数器清零:
-    }else if((strncmp(CmdRxBuffer,"#CALI",5)==0)&&(CmdRxEnd==1)){        //电机工作开始
+        transdata_point_p1(MoveFrePoint);
+    }else if((strncmp(CmdRxBuffer,"#CALI",5)==0)&&(CmdRxEnd==1)){        //自动开始校准工作
         delay_ms(10);
         calibration();
     }

@@ -125,12 +125,12 @@ void NVIC_Configuartion(void){
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;                      //响应优先级0
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;                         //IRQ通道使能
     NVIC_Init(&NVIC_InitStructure);	                                        //根据指定的参数初始化VIC寄存器
-/*  UART4    */
-    NVIC_InitStructure.NVIC_IRQChannel = UART4_IRQn;                        //打开UART4的全局终端
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=0 ;                //抢占优先级0
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;                      //响应优先级1
-    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;                         //IRQ通道使能
-    NVIC_Init(&NVIC_InitStructure);	                                        //根据指定的参数初始化VIC寄存器
+/* [>  UART4    <] */
+/*     NVIC_InitStructure.NVIC_IRQChannel = UART4_IRQn;                        //打开UART4的全局终端 */
+/*     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=0 ;                //抢占优先级0 */
+/*     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;                      //响应优先级1 */
+/*     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;                         //IRQ通道使能 */
+/*     NVIC_Init(&NVIC_InitStructure);	                                        //根据指定的参数初始化VIC寄存器 */
 //*  USART2    */
     NVIC_InitStructure.NVIC_IRQChannel = USART2_IRQn;                        //打开USART2的全局终端
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=0 ;                //抢占优先级0
@@ -143,12 +143,12 @@ void NVIC_Configuartion(void){
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;                      //响应优先级1
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;                         //IRQ通道使能
     NVIC_Init(&NVIC_InitStructure);	                                        //根据指定的参数初始化VIC寄存器
-//*  EXTI11   */
-    NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;                        //打开外部中断
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1 ;                //抢占优先级0
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;                      //响应优先级1
-    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;                         //IRQ通道使能
-    NVIC_Init(&NVIC_InitStructure);
+/* /[>  EXTI11   <] */
+/*     NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;                        //打开外部中断 */
+/*     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1 ;                //抢占优先级0 */
+/*     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;                      //响应优先级1 */
+/*     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;                         //IRQ通道使能 */
+/*     NVIC_Init(&NVIC_InitStructure); */
 //*  EXTI1   */
     NVIC_InitStructure.NVIC_IRQChannel = EXTI1_IRQn;                        //打开外部中断
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1 ;                //抢占优先级0
@@ -161,11 +161,11 @@ void NVIC_Configuartion(void){
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;                      //响应优先级1
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;                         //IRQ通道使能
     NVIC_Init(&NVIC_InitStructure);			//根据指定的参数初始化VIC寄存器
-/*  TIM3    */
-    NVIC_InitStructure.NVIC_IRQChannel = TIM3_IRQn;                         //打开TIM3的全局中断
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=0 ;                //抢占优先级0
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;                      //响应优先级2
-    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;                         //IRQ通道使能
-    NVIC_Init(&NVIC_InitStructure);	                                        //根据指定的参数初始化VIC寄存器
+/* [>  TIM3    <] */
+/*     NVIC_InitStructure.NVIC_IRQChannel = TIM3_IRQn;                         //打开TIM3的全局中断 */
+/*     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=0 ;                //抢占优先级0 */
+/*     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;                      //响应优先级2 */
+/*     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;                         //IRQ通道使能 */
+/*     NVIC_Init(&NVIC_InitStructure);	                                        //根据指定的参数初始化VIC寄存器 */
 }
 

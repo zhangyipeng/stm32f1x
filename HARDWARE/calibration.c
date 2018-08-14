@@ -1,6 +1,6 @@
 #include "calibration.h"
 /****************************************************************************
-* Function Name :   transdata
+* Function Name :  calibration
 * Description   :   5频点AD数据上传
 * Input         :   电机位置（行，列）
 * Output        :   二进制数TxBuffer：行，列，I通道数据，Q通道数据，频率

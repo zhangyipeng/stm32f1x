@@ -13,5 +13,7 @@ void transdata_point(uint8_t p);
 void transdata_reverse(uint8_t row,uint8_t col);
 void transdata_t(uint8_t row,uint8_t col);
 void transdata_point_t(uint8_t p,uint8_t row,uint8_t col);
+void transdata_point_p1(uint8_t p);
+void transdata_point_p2(uint8_t p,uint8_t row,uint8_t col);
 
 #endif
