@@ -326,19 +326,8 @@ Discarded input sections
  .ARM.attributes
                 0x0000000000000000       0x33 ./USER/public.o
  .data          0x0000000000000000        0x0 ./USER/stm32f10x_it.o
- .text          0x0000000000000000       0x60 ./HARDWARE/itr.o
  .data          0x0000000000000000        0x0 ./HARDWARE/itr.o
  .bss           0x0000000000000000        0x0 ./HARDWARE/itr.o
- .debug_info    0x0000000000000000      0x2d5 ./HARDWARE/itr.o
- .debug_abbrev  0x0000000000000000      0x106 ./HARDWARE/itr.o
- .debug_aranges
-                0x0000000000000000       0x20 ./HARDWARE/itr.o
- .debug_line    0x0000000000000000      0x1d3 ./HARDWARE/itr.o
- .debug_str     0x0000000000000000      0x3ba ./HARDWARE/itr.o
- .comment       0x0000000000000000       0x7f ./HARDWARE/itr.o
- .debug_frame   0x0000000000000000       0x34 ./HARDWARE/itr.o
- .ARM.attributes
-                0x0000000000000000       0x33 ./HARDWARE/itr.o
  .data          0x0000000000000000        0x0 ./HARDWARE/rs485.o
  .bss           0x0000000000000000        0x0 ./HARDWARE/rs485.o
  .data          0x0000000000000000        0x0 ./HARDWARE/led.o
@@ -572,7 +561,7 @@ LOAD /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/t
 .eh_frame       0x00000000080001e4        0x0
  .eh_frame      0x00000000080001e4        0x0 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 
-.text           0x00000000080001e8     0x9b58
+.text           0x00000000080001e8     0x9bf0
                 0x00000000080001e8                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080001e8       0x40 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
@@ -828,321 +817,325 @@ LOAD /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/t
  *fill*         0x0000000008004cfc        0x4 
  .text          0x0000000008004d00      0x1e0 ./USER/main.o
                 0x0000000008004d00                main
- .text          0x0000000008004ee0      0x404 ./USER/stm32f10x_it.o
+ .text          0x0000000008004ee0      0x424 ./USER/stm32f10x_it.o
                 0x0000000008004ee0                NMI_Handler
                 0x0000000008004eec                TIM2_IRQHandler
                 0x0000000008004ef8                TIM3_IRQHandler
                 0x00000000080050a0                EXTI1_IRQHandler
                 0x0000000008005108                EXTI3_IRQHandler
                 0x0000000008005134                EXTI9_5_IRQHandler
-                0x0000000008005178                EXTI15_10_IRQHandler
-                0x00000000080051dc                USART1_IRQHandler
-                0x000000000800521c                USART2_IRQHandler
-                0x000000000800525c                UART4_IRQHandler
-                0x000000000800529c                HardFault_Handler
-                0x00000000080052a2                MemManage_Handler
-                0x00000000080052a8                BusFault_Handler
-                0x00000000080052ae                UsageFault_Handler
-                0x00000000080052b4                DebugMon_Handler
-                0x00000000080052c0                SVC_Handler
-                0x00000000080052cc                PendSV_Handler
-                0x00000000080052d8                SysTick_Handler
- .text          0x00000000080052e4      0x154 ./HARDWARE/rs485.o
-                0x00000000080052e4                rs485_init
-                0x00000000080053c8                Usart_SendString
-                0x0000000008005400                Usart_SendStr_length
- .text          0x0000000008005438       0xc8 ./HARDWARE/led.o
-                0x0000000008005438                LED_Init
- .text          0x0000000008005500      0x1f4 ./HARDWARE/radio.o
-                0x0000000008005500                setPLL
-                0x0000000008005560                setDAC
-                0x000000000800559c                setPGA
-                0x00000000080055d8                readADC
-                0x0000000008005624                meanAD
-                0x00000000080056a4                setHMC
- .text          0x00000000080056f4       0x90 ./HARDWARE/usart.o
-                0x00000000080056f4                usart_init
- .text          0x0000000008005784      0x9d4 ./HARDWARE/command.o
-                0x0000000008005784                CommandResolution
-                0x0000000008005f60                CommandRxEndUart1
-                0x0000000008005ff4                CommandRxEndUart2
-                0x0000000008006088                CommandRxEndUart4
-                0x000000000800610c                CommandBufferClear
- .text          0x0000000008006158      0x784 ./HARDWARE/move.o
-                0x0000000008006158                move_2mm
-                0x0000000008006700                move_5mm
- .text          0x00000000080068dc       0xcc ./HARDWARE/systick.o
-                0x00000000080068dc                delay_us
-                0x0000000008006930                delay_ms
-                0x0000000008006988                delay_ns
- .text          0x00000000080069a8      0x2d4 ./HARDWARE/spi_flash.o
-                0x00000000080069a8                SPIx_FLASH_Init
-                0x0000000008006a20                SPI1_FLASH_Init
-                0x0000000008006a7c                SPI2_FLASH_Init
-                0x0000000008006ae0                SPIx_FLASH_SendByte
-                0x0000000008006b68                SPI1_FLASH_SendByte
-                0x0000000008006bec                SPI2_FLASH_SendByte
- .text          0x0000000008006c7c       0xc8 ./HARDWARE/spi.o
-                0x0000000008006c7c                SPI2_Config
-                0x0000000008006cf8                SPI2_WriteReadData
- .text          0x0000000008006d44       0xac ./HARDWARE/encoder.o
-                0x0000000008006d44                encoder_init
- .text          0x0000000008006df0       0xae ./HARDWARE/calculate.o
-                0x0000000008006df0                char2hex
-                0x0000000008006e6a                pow2
- *fill*         0x0000000008006e9e        0x2 
- .text          0x0000000008006ea0       0xe0 ./HARDWARE/adc.o
-                0x0000000008006ea0                adc_init
-                0x0000000008006f3c                Get_Adc
- .text          0x0000000008006f80       0x98 ./HARDWARE/wifi.o
-                0x0000000008006f80                wifi_init
- .text          0x0000000008007018     0x1a64 ./HARDWARE/translate.o
-                0x0000000008007018                transdata
-                0x00000000080074c4                transdata_point
-                0x0000000008007904                transdata_reverse
-                0x0000000008007da8                transdata_t
-                0x0000000008008254                transdata_point_t
-                0x000000000800865c                transdata_point_p1
-                0x0000000008008968                transdata_point_p2
- .text          0x0000000008008a7c       0xf8 ./HARDWARE/system_id.o
-                0x0000000008008a7c                ReadSystemID
-                0x0000000008008ac4                CheckSystemID
- .text          0x0000000008008b74      0x220 ./HARDWARE/system.o
-                0x0000000008008b74                RCC_Configuration
-                0x0000000008008baa                sys_rst
-                0x0000000008008d04                NVIC_Configuartion
- .text          0x0000000008008d94      0x59c ./HARDWARE/calibration.o
-                0x0000000008008d94                calibration
- .text          0x0000000008009330      0x378 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
-                0x0000000008009330                __aeabi_drsub
-                0x0000000008009338                __aeabi_dsub
-                0x0000000008009338                __subdf3
-                0x000000000800933c                __adddf3
-                0x000000000800933c                __aeabi_dadd
-                0x00000000080095b4                __aeabi_ui2d
-                0x00000000080095b4                __floatunsidf
-                0x00000000080095d4                __floatsidf
-                0x00000000080095d4                __aeabi_i2d
-                0x00000000080095f8                __extendsfdf2
-                0x00000000080095f8                __aeabi_f2d
-                0x000000000800963c                __aeabi_ul2d
-                0x000000000800963c                __floatundidf
-                0x000000000800964c                __floatdidf
-                0x000000000800964c                __aeabi_l2d
- .text          0x00000000080096a8      0x424 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
-                0x00000000080096a8                __aeabi_dmul
-                0x00000000080096a8                __muldf3
-                0x00000000080098fc                __aeabi_ddiv
-                0x00000000080098fc                __divdf3
- .text          0x0000000008009acc       0x40 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_fixunsdfsi.o)
-                0x0000000008009acc                __fixunsdfsi
-                0x0000000008009acc                __aeabi_d2uiz
+                0x0000000008005198                EXTI15_10_IRQHandler
+                0x00000000080051fc                USART1_IRQHandler
+                0x000000000800523c                USART2_IRQHandler
+                0x000000000800527c                UART4_IRQHandler
+                0x00000000080052bc                HardFault_Handler
+                0x00000000080052c2                MemManage_Handler
+                0x00000000080052c8                BusFault_Handler
+                0x00000000080052ce                UsageFault_Handler
+                0x00000000080052d4                DebugMon_Handler
+                0x00000000080052e0                SVC_Handler
+                0x00000000080052ec                PendSV_Handler
+                0x00000000080052f8                SysTick_Handler
+ .text          0x0000000008005304       0x60 ./HARDWARE/itr.o
+                0x0000000008005304                itr_init
+ .text          0x0000000008005364      0x154 ./HARDWARE/rs485.o
+                0x0000000008005364                rs485_init
+                0x0000000008005448                Usart_SendString
+                0x0000000008005480                Usart_SendStr_length
+ .text          0x00000000080054b8       0xc8 ./HARDWARE/led.o
+                0x00000000080054b8                LED_Init
+ .text          0x0000000008005580      0x1f4 ./HARDWARE/radio.o
+                0x0000000008005580                setPLL
+                0x00000000080055e0                setDAC
+                0x000000000800561c                setPGA
+                0x0000000008005658                readADC
+                0x00000000080056a4                meanAD
+                0x0000000008005724                setHMC
+ .text          0x0000000008005774       0x90 ./HARDWARE/usart.o
+                0x0000000008005774                usart_init
+ .text          0x0000000008005804      0x9d4 ./HARDWARE/command.o
+                0x0000000008005804                CommandResolution
+                0x0000000008005fe0                CommandRxEndUart1
+                0x0000000008006074                CommandRxEndUart2
+                0x0000000008006108                CommandRxEndUart4
+                0x000000000800618c                CommandBufferClear
+ .text          0x00000000080061d8      0x784 ./HARDWARE/move.o
+                0x00000000080061d8                move_2mm
+                0x0000000008006780                move_5mm
+ .text          0x000000000800695c       0xcc ./HARDWARE/systick.o
+                0x000000000800695c                delay_us
+                0x00000000080069b0                delay_ms
+                0x0000000008006a08                delay_ns
+ .text          0x0000000008006a28      0x2d4 ./HARDWARE/spi_flash.o
+                0x0000000008006a28                SPIx_FLASH_Init
+                0x0000000008006aa0                SPI1_FLASH_Init
+                0x0000000008006afc                SPI2_FLASH_Init
+                0x0000000008006b60                SPIx_FLASH_SendByte
+                0x0000000008006be8                SPI1_FLASH_SendByte
+                0x0000000008006c6c                SPI2_FLASH_SendByte
+ .text          0x0000000008006cfc       0xc8 ./HARDWARE/spi.o
+                0x0000000008006cfc                SPI2_Config
+                0x0000000008006d78                SPI2_WriteReadData
+ .text          0x0000000008006dc4       0xac ./HARDWARE/encoder.o
+                0x0000000008006dc4                encoder_init
+ .text          0x0000000008006e70       0xae ./HARDWARE/calculate.o
+                0x0000000008006e70                char2hex
+                0x0000000008006eea                pow2
+ *fill*         0x0000000008006f1e        0x2 
+ .text          0x0000000008006f20       0xe0 ./HARDWARE/adc.o
+                0x0000000008006f20                adc_init
+                0x0000000008006fbc                Get_Adc
+ .text          0x0000000008007000       0x98 ./HARDWARE/wifi.o
+                0x0000000008007000                wifi_init
+ .text          0x0000000008007098     0x1a64 ./HARDWARE/translate.o
+                0x0000000008007098                transdata
+                0x0000000008007544                transdata_point
+                0x0000000008007984                transdata_reverse
+                0x0000000008007e28                transdata_t
+                0x00000000080082d4                transdata_point_t
+                0x00000000080086dc                transdata_point_p1
+                0x00000000080089e8                transdata_point_p2
+ .text          0x0000000008008afc       0xf8 ./HARDWARE/system_id.o
+                0x0000000008008afc                ReadSystemID
+                0x0000000008008b44                CheckSystemID
+ .text          0x0000000008008bf4      0x238 ./HARDWARE/system.o
+                0x0000000008008bf4                RCC_Configuration
+                0x0000000008008c2a                sys_rst
+                0x0000000008008d84                NVIC_Configuartion
+ .text          0x0000000008008e2c      0x59c ./HARDWARE/calibration.o
+                0x0000000008008e2c                calibration
+ .text          0x00000000080093c8      0x378 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
+                0x00000000080093c8                __aeabi_drsub
+                0x00000000080093d0                __aeabi_dsub
+                0x00000000080093d0                __subdf3
+                0x00000000080093d4                __adddf3
+                0x00000000080093d4                __aeabi_dadd
+                0x000000000800964c                __aeabi_ui2d
+                0x000000000800964c                __floatunsidf
+                0x000000000800966c                __floatsidf
+                0x000000000800966c                __aeabi_i2d
+                0x0000000008009690                __extendsfdf2
+                0x0000000008009690                __aeabi_f2d
+                0x00000000080096d4                __aeabi_ul2d
+                0x00000000080096d4                __floatundidf
+                0x00000000080096e4                __floatdidf
+                0x00000000080096e4                __aeabi_l2d
+ .text          0x0000000008009740      0x424 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
+                0x0000000008009740                __aeabi_dmul
+                0x0000000008009740                __muldf3
+                0x0000000008009994                __aeabi_ddiv
+                0x0000000008009994                __divdf3
+ .text          0x0000000008009b64       0x40 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_fixunsdfsi.o)
+                0x0000000008009b64                __fixunsdfsi
+                0x0000000008009b64                __aeabi_d2uiz
  *(.text*)
  .text.Reset_Handler
-                0x0000000008009b0c       0x44 ./CORE/startup_stm32f10x_hd.o
-                0x0000000008009b0c                Reset_Handler
+                0x0000000008009ba4       0x44 ./CORE/startup_stm32f10x_hd.o
+                0x0000000008009ba4                Reset_Handler
  .text.Default_Handler
-                0x0000000008009b50        0x2 ./CORE/startup_stm32f10x_hd.o
-                0x0000000008009b50                EXTI2_IRQHandler
-                0x0000000008009b50                TIM8_TRG_COM_IRQHandler
-                0x0000000008009b50                TIM8_CC_IRQHandler
-                0x0000000008009b50                TIM1_CC_IRQHandler
-                0x0000000008009b50                TIM6_IRQHandler
-                0x0000000008009b50                PVD_IRQHandler
-                0x0000000008009b50                SDIO_IRQHandler
-                0x0000000008009b50                EXTI0_IRQHandler
-                0x0000000008009b50                I2C2_EV_IRQHandler
-                0x0000000008009b50                ADC1_2_IRQHandler
-                0x0000000008009b50                SPI1_IRQHandler
-                0x0000000008009b50                TAMPER_IRQHandler
-                0x0000000008009b50                TIM8_UP_IRQHandler
-                0x0000000008009b50                DMA2_Channel2_IRQHandler
-                0x0000000008009b50                DMA1_Channel4_IRQHandler
-                0x0000000008009b50                USART3_IRQHandler
-                0x0000000008009b50                RTC_IRQHandler
-                0x0000000008009b50                DMA1_Channel7_IRQHandler
-                0x0000000008009b50                CAN1_RX1_IRQHandler
-                0x0000000008009b50                UART5_IRQHandler
-                0x0000000008009b50                ADC3_IRQHandler
-                0x0000000008009b50                TIM4_IRQHandler
-                0x0000000008009b50                DMA2_Channel1_IRQHandler
-                0x0000000008009b50                I2C1_EV_IRQHandler
-                0x0000000008009b50                DMA1_Channel6_IRQHandler
-                0x0000000008009b50                RCC_IRQHandler
-                0x0000000008009b50                TIM1_TRG_COM_IRQHandler
-                0x0000000008009b50                DMA1_Channel1_IRQHandler
-                0x0000000008009b50                Default_Handler
-                0x0000000008009b50                TIM7_IRQHandler
-                0x0000000008009b50                TIM5_IRQHandler
-                0x0000000008009b50                SPI2_IRQHandler
-                0x0000000008009b50                DMA1_Channel5_IRQHandler
-                0x0000000008009b50                EXTI4_IRQHandler
-                0x0000000008009b50                USB_LP_CAN1_RX0_IRQHandler
-                0x0000000008009b50                USB_HP_CAN1_TX_IRQHandler
-                0x0000000008009b50                DMA1_Channel3_IRQHandler
-                0x0000000008009b50                FSMC_IRQHandler
-                0x0000000008009b50                TIM1_UP_IRQHandler
-                0x0000000008009b50                WWDG_IRQHandler
-                0x0000000008009b50                TIM1_BRK_IRQHandler
-                0x0000000008009b50                RTCAlarm_IRQHandler
-                0x0000000008009b50                DMA2_Channel4_5_IRQHandler
-                0x0000000008009b50                I2C2_ER_IRQHandler
-                0x0000000008009b50                DMA1_Channel2_IRQHandler
-                0x0000000008009b50                TIM8_BRK_IRQHandler
-                0x0000000008009b50                CAN1_SCE_IRQHandler
-                0x0000000008009b50                FLASH_IRQHandler
-                0x0000000008009b50                SPI3_IRQHandler
-                0x0000000008009b50                I2C1_ER_IRQHandler
-                0x0000000008009b50                USBWakeUp_IRQHandler
-                0x0000000008009b50                DMA2_Channel3_IRQHandler
- .text.strcpy   0x0000000008009b52       0x10 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strcpy.o)
-                0x0000000008009b52                strcpy
- .text.strncmp  0x0000000008009b62       0x24 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strncmp.o)
-                0x0000000008009b62                strncmp
+                0x0000000008009be8        0x2 ./CORE/startup_stm32f10x_hd.o
+                0x0000000008009be8                EXTI2_IRQHandler
+                0x0000000008009be8                TIM8_TRG_COM_IRQHandler
+                0x0000000008009be8                TIM8_CC_IRQHandler
+                0x0000000008009be8                TIM1_CC_IRQHandler
+                0x0000000008009be8                TIM6_IRQHandler
+                0x0000000008009be8                PVD_IRQHandler
+                0x0000000008009be8                SDIO_IRQHandler
+                0x0000000008009be8                EXTI0_IRQHandler
+                0x0000000008009be8                I2C2_EV_IRQHandler
+                0x0000000008009be8                ADC1_2_IRQHandler
+                0x0000000008009be8                SPI1_IRQHandler
+                0x0000000008009be8                TAMPER_IRQHandler
+                0x0000000008009be8                TIM8_UP_IRQHandler
+                0x0000000008009be8                DMA2_Channel2_IRQHandler
+                0x0000000008009be8                DMA1_Channel4_IRQHandler
+                0x0000000008009be8                USART3_IRQHandler
+                0x0000000008009be8                RTC_IRQHandler
+                0x0000000008009be8                DMA1_Channel7_IRQHandler
+                0x0000000008009be8                CAN1_RX1_IRQHandler
+                0x0000000008009be8                UART5_IRQHandler
+                0x0000000008009be8                ADC3_IRQHandler
+                0x0000000008009be8                TIM4_IRQHandler
+                0x0000000008009be8                DMA2_Channel1_IRQHandler
+                0x0000000008009be8                I2C1_EV_IRQHandler
+                0x0000000008009be8                DMA1_Channel6_IRQHandler
+                0x0000000008009be8                RCC_IRQHandler
+                0x0000000008009be8                TIM1_TRG_COM_IRQHandler
+                0x0000000008009be8                DMA1_Channel1_IRQHandler
+                0x0000000008009be8                Default_Handler
+                0x0000000008009be8                TIM7_IRQHandler
+                0x0000000008009be8                TIM5_IRQHandler
+                0x0000000008009be8                SPI2_IRQHandler
+                0x0000000008009be8                DMA1_Channel5_IRQHandler
+                0x0000000008009be8                EXTI4_IRQHandler
+                0x0000000008009be8                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000008009be8                USB_HP_CAN1_TX_IRQHandler
+                0x0000000008009be8                DMA1_Channel3_IRQHandler
+                0x0000000008009be8                FSMC_IRQHandler
+                0x0000000008009be8                TIM1_UP_IRQHandler
+                0x0000000008009be8                WWDG_IRQHandler
+                0x0000000008009be8                TIM1_BRK_IRQHandler
+                0x0000000008009be8                RTCAlarm_IRQHandler
+                0x0000000008009be8                DMA2_Channel4_5_IRQHandler
+                0x0000000008009be8                I2C2_ER_IRQHandler
+                0x0000000008009be8                DMA1_Channel2_IRQHandler
+                0x0000000008009be8                TIM8_BRK_IRQHandler
+                0x0000000008009be8                CAN1_SCE_IRQHandler
+                0x0000000008009be8                FLASH_IRQHandler
+                0x0000000008009be8                SPI3_IRQHandler
+                0x0000000008009be8                I2C1_ER_IRQHandler
+                0x0000000008009be8                USBWakeUp_IRQHandler
+                0x0000000008009be8                DMA2_Channel3_IRQHandler
+ .text.strcpy   0x0000000008009bea       0x10 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strcpy.o)
+                0x0000000008009bea                strcpy
+ .text.strncmp  0x0000000008009bfa       0x24 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strncmp.o)
+                0x0000000008009bfa                strncmp
  *(.rodata)
- *fill*         0x0000000008009b86        0x2 
- .rodata        0x0000000008009b88        0x8 ./USER/stm32f10x_it.o
- .rodata        0x0000000008009b90      0x142 ./HARDWARE/command.o
- *fill*         0x0000000008009cd2        0x2 
- .rodata        0x0000000008009cd4       0x3d ./HARDWARE/move.o
- *fill*         0x0000000008009d11        0x3 
- .rodata        0x0000000008009d14       0x11 ./HARDWARE/system_id.o
+ *fill*         0x0000000008009c1e        0x2 
+ .rodata        0x0000000008009c20        0x8 ./USER/stm32f10x_it.o
+ .rodata        0x0000000008009c28      0x142 ./HARDWARE/command.o
+ *fill*         0x0000000008009d6a        0x2 
+ .rodata        0x0000000008009d6c       0x3d ./HARDWARE/move.o
+ *fill*         0x0000000008009da9        0x3 
+ .rodata        0x0000000008009dac       0x11 ./HARDWARE/system_id.o
  *(.rodata*)
  *(.glue_7)
- .glue_7        0x0000000008009d25        0x0 linker stubs
+ .glue_7        0x0000000008009dbd        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008009d25        0x0 linker stubs
+ .glue_7t       0x0000000008009dbd        0x0 linker stubs
  *(.init)
- *fill*         0x0000000008009d25        0x3 
- .init          0x0000000008009d28        0x4 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
-                0x0000000008009d28                _init
- .init          0x0000000008009d2c        0x8 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+ *fill*         0x0000000008009dbd        0x3 
+ .init          0x0000000008009dc0        0x4 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x0000000008009dc0                _init
+ .init          0x0000000008009dc4        0x8 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
  *(.fini)
- .fini          0x0000000008009d34        0x4 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
-                0x0000000008009d34                _fini
- .fini          0x0000000008009d38        0x8 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
-                0x0000000008009d40                . = ALIGN (0x4)
-                0x0000000008009d40                _etext = .
+ .fini          0x0000000008009dcc        0x4 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x0000000008009dcc                _fini
+ .fini          0x0000000008009dd0        0x8 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+                0x0000000008009dd8                . = ALIGN (0x4)
+                0x0000000008009dd8                _etext = .
 
-.vfp11_veneer   0x0000000008009d40        0x0
- .vfp11_veneer  0x0000000008009d40        0x0 linker stubs
+.vfp11_veneer   0x0000000008009dd8        0x0
+ .vfp11_veneer  0x0000000008009dd8        0x0 linker stubs
 
-.v4_bx          0x0000000008009d40        0x0
- .v4_bx         0x0000000008009d40        0x0 linker stubs
+.v4_bx          0x0000000008009dd8        0x0
+ .v4_bx         0x0000000008009dd8        0x0 linker stubs
 
-.iplt           0x0000000008009d40        0x0
- .iplt          0x0000000008009d40        0x0 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+.iplt           0x0000000008009dd8        0x0
+ .iplt          0x0000000008009dd8        0x0 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 
-.rel.dyn        0x0000000008009d40        0x0
- .rel.iplt      0x0000000008009d40        0x0 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+.rel.dyn        0x0000000008009dd8        0x0
+ .rel.iplt      0x0000000008009dd8        0x0 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008009d40        0x0
-                0x0000000008009d40                __exidx_start = .
+.ARM            0x0000000008009dd8        0x0
+                0x0000000008009dd8                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008009d40                __exidx_end = .
+                0x0000000008009dd8                __exidx_end = .
 
 .ARM.attributes
-                0x0000000008009d40       0x29
+                0x0000000008009dd8       0x29
  *(.ARM.attributes)
  .ARM.attributes
-                0x0000000008009d40       0x1d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x0000000008009dd8       0x1d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
  .ARM.attributes
-                0x0000000008009d5d       0x2d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+                0x0000000008009df5       0x2d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
  .ARM.attributes
-                0x0000000008009d8a       0x33 ./SYSTEM/src/stm32f10x_exti.o
+                0x0000000008009e22       0x33 ./SYSTEM/src/stm32f10x_exti.o
  .ARM.attributes
-                0x0000000008009dbd       0x33 ./SYSTEM/src/stm32f10x_gpio.o
+                0x0000000008009e55       0x33 ./SYSTEM/src/stm32f10x_gpio.o
  .ARM.attributes
-                0x0000000008009df0       0x33 ./SYSTEM/src/stm32f10x_rcc.o
+                0x0000000008009e88       0x33 ./SYSTEM/src/stm32f10x_rcc.o
  .ARM.attributes
-                0x0000000008009e23       0x33 ./SYSTEM/src/stm32f10x_tim.o
+                0x0000000008009ebb       0x33 ./SYSTEM/src/stm32f10x_tim.o
  .ARM.attributes
-                0x0000000008009e56       0x33 ./SYSTEM/src/stm32f10x_usart.o
+                0x0000000008009eee       0x33 ./SYSTEM/src/stm32f10x_usart.o
  .ARM.attributes
-                0x0000000008009e89       0x33 ./SYSTEM/src/stm32f10x_adc.o
+                0x0000000008009f21       0x33 ./SYSTEM/src/stm32f10x_adc.o
  .ARM.attributes
-                0x0000000008009ebc       0x33 ./SYSTEM/src/misc.o
+                0x0000000008009f54       0x33 ./SYSTEM/src/misc.o
  .ARM.attributes
-                0x0000000008009eef       0x33 ./SYSTEM/src/stm32f10x_spi.o
+                0x0000000008009f87       0x33 ./SYSTEM/src/stm32f10x_spi.o
  .ARM.attributes
-                0x0000000008009f22       0x33 ./USER/system_stm32f10x.o
+                0x0000000008009fba       0x33 ./USER/system_stm32f10x.o
  .ARM.attributes
-                0x0000000008009f55       0x33 ./USER/main.o
+                0x0000000008009fed       0x33 ./USER/main.o
  .ARM.attributes
-                0x0000000008009f88       0x33 ./USER/stm32f10x_it.o
+                0x000000000800a020       0x33 ./USER/stm32f10x_it.o
  .ARM.attributes
-                0x0000000008009fbb       0x33 ./HARDWARE/rs485.o
+                0x000000000800a053       0x33 ./HARDWARE/itr.o
  .ARM.attributes
-                0x0000000008009fee       0x33 ./HARDWARE/led.o
+                0x000000000800a086       0x33 ./HARDWARE/rs485.o
  .ARM.attributes
-                0x000000000800a021       0x33 ./HARDWARE/radio.o
+                0x000000000800a0b9       0x33 ./HARDWARE/led.o
  .ARM.attributes
-                0x000000000800a054       0x33 ./HARDWARE/usart.o
+                0x000000000800a0ec       0x33 ./HARDWARE/radio.o
  .ARM.attributes
-                0x000000000800a087       0x33 ./HARDWARE/command.o
+                0x000000000800a11f       0x33 ./HARDWARE/usart.o
  .ARM.attributes
-                0x000000000800a0ba       0x33 ./HARDWARE/move.o
+                0x000000000800a152       0x33 ./HARDWARE/command.o
  .ARM.attributes
-                0x000000000800a0ed       0x33 ./HARDWARE/systick.o
+                0x000000000800a185       0x33 ./HARDWARE/move.o
  .ARM.attributes
-                0x000000000800a120       0x33 ./HARDWARE/spi_flash.o
+                0x000000000800a1b8       0x33 ./HARDWARE/systick.o
  .ARM.attributes
-                0x000000000800a153       0x33 ./HARDWARE/spi.o
+                0x000000000800a1eb       0x33 ./HARDWARE/spi_flash.o
  .ARM.attributes
-                0x000000000800a186       0x33 ./HARDWARE/encoder.o
+                0x000000000800a21e       0x33 ./HARDWARE/spi.o
  .ARM.attributes
-                0x000000000800a1b9       0x33 ./HARDWARE/calculate.o
+                0x000000000800a251       0x33 ./HARDWARE/encoder.o
  .ARM.attributes
-                0x000000000800a1ec       0x33 ./HARDWARE/adc.o
+                0x000000000800a284       0x33 ./HARDWARE/calculate.o
  .ARM.attributes
-                0x000000000800a21f       0x33 ./HARDWARE/wifi.o
+                0x000000000800a2b7       0x33 ./HARDWARE/adc.o
  .ARM.attributes
-                0x000000000800a252       0x33 ./HARDWARE/translate.o
+                0x000000000800a2ea       0x33 ./HARDWARE/wifi.o
  .ARM.attributes
-                0x000000000800a285       0x33 ./HARDWARE/system_id.o
+                0x000000000800a31d       0x33 ./HARDWARE/translate.o
  .ARM.attributes
-                0x000000000800a2b8       0x33 ./HARDWARE/system.o
+                0x000000000800a350       0x33 ./HARDWARE/system_id.o
  .ARM.attributes
-                0x000000000800a2eb       0x33 ./HARDWARE/calibration.o
+                0x000000000800a383       0x33 ./HARDWARE/system.o
  .ARM.attributes
-                0x000000000800a31e       0x21 ./CORE/startup_stm32f10x_hd.o
+                0x000000000800a3b6       0x33 ./HARDWARE/calibration.o
  .ARM.attributes
-                0x000000000800a33f       0x2d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strcpy.o)
+                0x000000000800a3e9       0x21 ./CORE/startup_stm32f10x_hd.o
  .ARM.attributes
-                0x000000000800a36c       0x2d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strncmp.o)
+                0x000000000800a40a       0x2d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strcpy.o)
  .ARM.attributes
-                0x000000000800a399       0x1d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
+                0x000000000800a437       0x2d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strncmp.o)
  .ARM.attributes
-                0x000000000800a3b6       0x1d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
+                0x000000000800a464       0x1d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x000000000800a3d3       0x1d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_fixunsdfsi.o)
+                0x000000000800a481       0x1d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x000000000800a3f0       0x1d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+                0x000000000800a49e       0x1d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x000000000800a4bb       0x1d /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
 
-.preinit_array  0x0000000008009d40        0x0
-                0x0000000008009d40                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x0000000008009dd8        0x0
+                0x0000000008009dd8                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0000000008009d40                PROVIDE (__preinit_array_end, .)
+                0x0000000008009dd8                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x0000000008009d40        0x4
-                0x0000000008009d40                PROVIDE (__init_array_start, .)
+.init_array     0x0000000008009dd8        0x4
+                0x0000000008009dd8                PROVIDE (__init_array_start, .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008009d40        0x4 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
-                0x0000000008009d44                PROVIDE (__init_array_end, .)
+ .init_array    0x0000000008009dd8        0x4 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+                0x0000000008009ddc                PROVIDE (__init_array_end, .)
 
-.fini_array     0x0000000008009d44        0x4
+.fini_array     0x0000000008009ddc        0x4
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(.fini_array*)
- .fini_array    0x0000000008009d44        0x4 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .fini_array    0x0000000008009ddc        0x4 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
  *(SORT_BY_NAME(.fini_array.*))
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x0000000008009d48                _sidata = .
+                0x0000000008009de0                _sidata = .
 
-.data           0x0000000020000000       0x34 load address 0x0000000008009d48
+.data           0x0000000020000000       0x34 load address 0x0000000008009de0
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -1162,11 +1155,11 @@ LOAD /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/t
                 0x0000000020000034                . = ALIGN (0x4)
                 0x0000000020000034                _edata = .
 
-.igot.plt       0x0000000020000034        0x0 load address 0x0000000008009d7c
+.igot.plt       0x0000000020000034        0x0 load address 0x0000000008009e14
  .igot.plt      0x0000000020000034        0x0 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
                 0x0000000020000034                . = ALIGN (0x4)
 
-.bss            0x0000000020000034     0x3158 load address 0x0000000008009d7c
+.bss            0x0000000020000034     0x3158 load address 0x0000000008009e14
                 0x0000000020000034                _sbss = .
                 0x0000000020000034                __bss_start__ = _sbss
  *(.bss)
@@ -1249,7 +1242,7 @@ LOAD /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/t
                 [!provide]                        PROVIDE (_end, _ebss)
 
 ._user_heap_stack
-                0x000000002000318c      0x200 load address 0x000000000800ced4
+                0x000000002000318c      0x200 load address 0x000000000800cf6c
                 0x000000002000318c                . = ALIGN (0x4)
                 0x000000002000318c                . = (. + _Min_Heap_Size)
                 0x000000002000338c                . = (. + _Min_Stack_Size)
@@ -1268,7 +1261,7 @@ LOAD /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/t
  libgcc.a(*)
 OUTPUT(Target.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x11257
+.debug_info     0x0000000000000000    0x1152d
  .debug_info    0x0000000000000000      0x347 ./SYSTEM/src/stm32f10x_exti.o
  .debug_info    0x0000000000000347      0x6e8 ./SYSTEM/src/stm32f10x_gpio.o
  .debug_info    0x0000000000000a2f      0x898 ./SYSTEM/src/stm32f10x_rcc.o
@@ -1279,27 +1272,28 @@ OUTPUT(Target.elf elf32-littlearm)
  .debug_info    0x0000000000004946      0x8eb ./SYSTEM/src/stm32f10x_spi.o
  .debug_info    0x0000000000005231      0x44c ./USER/system_stm32f10x.o
  .debug_info    0x000000000000567d     0x1089 ./USER/main.o
- .debug_info    0x0000000000006706     0x121e ./USER/stm32f10x_it.o
- .debug_info    0x0000000000007924      0x44f ./HARDWARE/rs485.o
- .debug_info    0x0000000000007d73      0x211 ./HARDWARE/led.o
- .debug_info    0x0000000000007f84      0xdcf ./HARDWARE/radio.o
- .debug_info    0x0000000000008d53      0x34a ./HARDWARE/usart.o
- .debug_info    0x000000000000909d      0xe43 ./HARDWARE/command.o
- .debug_info    0x0000000000009ee0      0xe34 ./HARDWARE/move.o
- .debug_info    0x000000000000ad14      0xd5e ./HARDWARE/systick.o
- .debug_info    0x000000000000ba72      0x36a ./HARDWARE/spi_flash.o
- .debug_info    0x000000000000bddc      0x3fb ./HARDWARE/spi.o
- .debug_info    0x000000000000c1d7      0x2d5 ./HARDWARE/encoder.o
- .debug_info    0x000000000000c4ac      0xd07 ./HARDWARE/calculate.o
- .debug_info    0x000000000000d1b3      0x3f3 ./HARDWARE/adc.o
- .debug_info    0x000000000000d5a6      0x358 ./HARDWARE/wifi.o
- .debug_info    0x000000000000d8fe      0xedd ./HARDWARE/translate.o
- .debug_info    0x000000000000e7db      0xda6 ./HARDWARE/system_id.o
- .debug_info    0x000000000000f581      0xef6 ./HARDWARE/system.o
- .debug_info    0x0000000000010477      0xdbe ./HARDWARE/calibration.o
- .debug_info    0x0000000000011235       0x22 ./CORE/startup_stm32f10x_hd.o
+ .debug_info    0x0000000000006706     0x121f ./USER/stm32f10x_it.o
+ .debug_info    0x0000000000007925      0x2d5 ./HARDWARE/itr.o
+ .debug_info    0x0000000000007bfa      0x44f ./HARDWARE/rs485.o
+ .debug_info    0x0000000000008049      0x211 ./HARDWARE/led.o
+ .debug_info    0x000000000000825a      0xdcf ./HARDWARE/radio.o
+ .debug_info    0x0000000000009029      0x34a ./HARDWARE/usart.o
+ .debug_info    0x0000000000009373      0xe43 ./HARDWARE/command.o
+ .debug_info    0x000000000000a1b6      0xe34 ./HARDWARE/move.o
+ .debug_info    0x000000000000afea      0xd5e ./HARDWARE/systick.o
+ .debug_info    0x000000000000bd48      0x36a ./HARDWARE/spi_flash.o
+ .debug_info    0x000000000000c0b2      0x3fb ./HARDWARE/spi.o
+ .debug_info    0x000000000000c4ad      0x2d5 ./HARDWARE/encoder.o
+ .debug_info    0x000000000000c782      0xd07 ./HARDWARE/calculate.o
+ .debug_info    0x000000000000d489      0x3f3 ./HARDWARE/adc.o
+ .debug_info    0x000000000000d87c      0x358 ./HARDWARE/wifi.o
+ .debug_info    0x000000000000dbd4      0xedd ./HARDWARE/translate.o
+ .debug_info    0x000000000000eab1      0xda6 ./HARDWARE/system_id.o
+ .debug_info    0x000000000000f857      0xef6 ./HARDWARE/system.o
+ .debug_info    0x000000000001074d      0xdbe ./HARDWARE/calibration.o
+ .debug_info    0x000000000001150b       0x22 ./CORE/startup_stm32f10x_hd.o
 
-.debug_abbrev   0x0000000000000000     0x3135
+.debug_abbrev   0x0000000000000000     0x323b
  .debug_abbrev  0x0000000000000000      0x16c ./SYSTEM/src/stm32f10x_exti.o
  .debug_abbrev  0x000000000000016c      0x1e1 ./SYSTEM/src/stm32f10x_gpio.o
  .debug_abbrev  0x000000000000034d      0x1d1 ./SYSTEM/src/stm32f10x_rcc.o
@@ -1311,26 +1305,27 @@ OUTPUT(Target.elf elf32-littlearm)
  .debug_abbrev  0x0000000000000d51      0x19b ./USER/system_stm32f10x.o
  .debug_abbrev  0x0000000000000eec      0x21c ./USER/main.o
  .debug_abbrev  0x0000000000001108      0x280 ./USER/stm32f10x_it.o
- .debug_abbrev  0x0000000000001388      0x177 ./HARDWARE/rs485.o
- .debug_abbrev  0x00000000000014ff      0x106 ./HARDWARE/led.o
- .debug_abbrev  0x0000000000001605      0x275 ./HARDWARE/radio.o
- .debug_abbrev  0x000000000000187a      0x106 ./HARDWARE/usart.o
- .debug_abbrev  0x0000000000001980      0x26b ./HARDWARE/command.o
- .debug_abbrev  0x0000000000001beb      0x223 ./HARDWARE/move.o
- .debug_abbrev  0x0000000000001e0e      0x230 ./HARDWARE/systick.o
- .debug_abbrev  0x000000000000203e      0x167 ./HARDWARE/spi_flash.o
- .debug_abbrev  0x00000000000021a5      0x13a ./HARDWARE/spi.o
- .debug_abbrev  0x00000000000022df      0x106 ./HARDWARE/encoder.o
- .debug_abbrev  0x00000000000023e5      0x227 ./HARDWARE/calculate.o
- .debug_abbrev  0x000000000000260c      0x13e ./HARDWARE/adc.o
- .debug_abbrev  0x000000000000274a      0x115 ./HARDWARE/wifi.o
- .debug_abbrev  0x000000000000285f      0x25b ./HARDWARE/translate.o
- .debug_abbrev  0x0000000000002aba      0x21f ./HARDWARE/system_id.o
- .debug_abbrev  0x0000000000002cd9      0x238 ./HARDWARE/system.o
- .debug_abbrev  0x0000000000002f11      0x212 ./HARDWARE/calibration.o
- .debug_abbrev  0x0000000000003123       0x12 ./CORE/startup_stm32f10x_hd.o
+ .debug_abbrev  0x0000000000001388      0x106 ./HARDWARE/itr.o
+ .debug_abbrev  0x000000000000148e      0x177 ./HARDWARE/rs485.o
+ .debug_abbrev  0x0000000000001605      0x106 ./HARDWARE/led.o
+ .debug_abbrev  0x000000000000170b      0x275 ./HARDWARE/radio.o
+ .debug_abbrev  0x0000000000001980      0x106 ./HARDWARE/usart.o
+ .debug_abbrev  0x0000000000001a86      0x26b ./HARDWARE/command.o
+ .debug_abbrev  0x0000000000001cf1      0x223 ./HARDWARE/move.o
+ .debug_abbrev  0x0000000000001f14      0x230 ./HARDWARE/systick.o
+ .debug_abbrev  0x0000000000002144      0x167 ./HARDWARE/spi_flash.o
+ .debug_abbrev  0x00000000000022ab      0x13a ./HARDWARE/spi.o
+ .debug_abbrev  0x00000000000023e5      0x106 ./HARDWARE/encoder.o
+ .debug_abbrev  0x00000000000024eb      0x227 ./HARDWARE/calculate.o
+ .debug_abbrev  0x0000000000002712      0x13e ./HARDWARE/adc.o
+ .debug_abbrev  0x0000000000002850      0x115 ./HARDWARE/wifi.o
+ .debug_abbrev  0x0000000000002965      0x25b ./HARDWARE/translate.o
+ .debug_abbrev  0x0000000000002bc0      0x21f ./HARDWARE/system_id.o
+ .debug_abbrev  0x0000000000002ddf      0x238 ./HARDWARE/system.o
+ .debug_abbrev  0x0000000000003017      0x212 ./HARDWARE/calibration.o
+ .debug_abbrev  0x0000000000003229       0x12 ./CORE/startup_stm32f10x_hd.o
 
-.debug_aranges  0x0000000000000000      0x3a8
+.debug_aranges  0x0000000000000000      0x3c8
  .debug_aranges
                 0x0000000000000000       0x20 ./SYSTEM/src/stm32f10x_exti.o
  .debug_aranges
@@ -1354,43 +1349,45 @@ OUTPUT(Target.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000140       0x20 ./USER/stm32f10x_it.o
  .debug_aranges
-                0x0000000000000160       0x20 ./HARDWARE/rs485.o
+                0x0000000000000160       0x20 ./HARDWARE/itr.o
  .debug_aranges
-                0x0000000000000180       0x20 ./HARDWARE/led.o
+                0x0000000000000180       0x20 ./HARDWARE/rs485.o
  .debug_aranges
-                0x00000000000001a0       0x20 ./HARDWARE/radio.o
+                0x00000000000001a0       0x20 ./HARDWARE/led.o
  .debug_aranges
-                0x00000000000001c0       0x20 ./HARDWARE/usart.o
+                0x00000000000001c0       0x20 ./HARDWARE/radio.o
  .debug_aranges
-                0x00000000000001e0       0x20 ./HARDWARE/command.o
+                0x00000000000001e0       0x20 ./HARDWARE/usart.o
  .debug_aranges
-                0x0000000000000200       0x20 ./HARDWARE/move.o
+                0x0000000000000200       0x20 ./HARDWARE/command.o
  .debug_aranges
-                0x0000000000000220       0x20 ./HARDWARE/systick.o
+                0x0000000000000220       0x20 ./HARDWARE/move.o
  .debug_aranges
-                0x0000000000000240       0x20 ./HARDWARE/spi_flash.o
+                0x0000000000000240       0x20 ./HARDWARE/systick.o
  .debug_aranges
-                0x0000000000000260       0x20 ./HARDWARE/spi.o
+                0x0000000000000260       0x20 ./HARDWARE/spi_flash.o
  .debug_aranges
-                0x0000000000000280       0x20 ./HARDWARE/encoder.o
+                0x0000000000000280       0x20 ./HARDWARE/spi.o
  .debug_aranges
-                0x00000000000002a0       0x20 ./HARDWARE/calculate.o
+                0x00000000000002a0       0x20 ./HARDWARE/encoder.o
  .debug_aranges
-                0x00000000000002c0       0x20 ./HARDWARE/adc.o
+                0x00000000000002c0       0x20 ./HARDWARE/calculate.o
  .debug_aranges
-                0x00000000000002e0       0x20 ./HARDWARE/wifi.o
+                0x00000000000002e0       0x20 ./HARDWARE/adc.o
  .debug_aranges
-                0x0000000000000300       0x20 ./HARDWARE/translate.o
+                0x0000000000000300       0x20 ./HARDWARE/wifi.o
  .debug_aranges
-                0x0000000000000320       0x20 ./HARDWARE/system_id.o
+                0x0000000000000320       0x20 ./HARDWARE/translate.o
  .debug_aranges
-                0x0000000000000340       0x20 ./HARDWARE/system.o
+                0x0000000000000340       0x20 ./HARDWARE/system_id.o
  .debug_aranges
-                0x0000000000000360       0x20 ./HARDWARE/calibration.o
+                0x0000000000000360       0x20 ./HARDWARE/system.o
  .debug_aranges
-                0x0000000000000380       0x28 ./CORE/startup_stm32f10x_hd.o
+                0x0000000000000380       0x20 ./HARDWARE/calibration.o
+ .debug_aranges
+                0x00000000000003a0       0x28 ./CORE/startup_stm32f10x_hd.o
 
-.debug_line     0x0000000000000000     0x4d18
+.debug_line     0x0000000000000000     0x4ef7
  .debug_line    0x0000000000000000      0x213 ./SYSTEM/src/stm32f10x_exti.o
  .debug_line    0x0000000000000213      0x2b8 ./SYSTEM/src/stm32f10x_gpio.o
  .debug_line    0x00000000000004cb      0x301 ./SYSTEM/src/stm32f10x_rcc.o
@@ -1400,28 +1397,29 @@ OUTPUT(Target.elf elf32-littlearm)
  .debug_line    0x0000000000001480      0x1d9 ./SYSTEM/src/misc.o
  .debug_line    0x0000000000001659      0x2cf ./SYSTEM/src/stm32f10x_spi.o
  .debug_line    0x0000000000001928      0x1c2 ./USER/system_stm32f10x.o
- .debug_line    0x0000000000001aea      0x24c ./USER/main.o
- .debug_line    0x0000000000001d36      0x306 ./USER/stm32f10x_it.o
- .debug_line    0x000000000000203c      0x20c ./HARDWARE/rs485.o
- .debug_line    0x0000000000002248      0x1ca ./HARDWARE/led.o
- .debug_line    0x0000000000002412      0x28e ./HARDWARE/radio.o
- .debug_line    0x00000000000026a0      0x1d8 ./HARDWARE/usart.o
- .debug_line    0x0000000000002878      0x3ca ./HARDWARE/command.o
- .debug_line    0x0000000000002c42      0x3aa ./HARDWARE/move.o
- .debug_line    0x0000000000002fec      0x285 ./HARDWARE/systick.o
- .debug_line    0x0000000000003271      0x250 ./HARDWARE/spi_flash.o
- .debug_line    0x00000000000034c1      0x1eb ./HARDWARE/spi.o
- .debug_line    0x00000000000036ac      0x1e5 ./HARDWARE/encoder.o
- .debug_line    0x0000000000003891      0x26d ./HARDWARE/calculate.o
- .debug_line    0x0000000000003afe      0x1f2 ./HARDWARE/adc.o
- .debug_line    0x0000000000003cf0      0x1d8 ./HARDWARE/wifi.o
- .debug_line    0x0000000000003ec8      0x520 ./HARDWARE/translate.o
- .debug_line    0x00000000000043e8      0x2a7 ./HARDWARE/system_id.o
- .debug_line    0x000000000000468f      0x2e6 ./HARDWARE/system.o
- .debug_line    0x0000000000004975      0x32c ./HARDWARE/calibration.o
- .debug_line    0x0000000000004ca1       0x77 ./CORE/startup_stm32f10x_hd.o
+ .debug_line    0x0000000000001aea      0x24d ./USER/main.o
+ .debug_line    0x0000000000001d37      0x30c ./USER/stm32f10x_it.o
+ .debug_line    0x0000000000002043      0x1d3 ./HARDWARE/itr.o
+ .debug_line    0x0000000000002216      0x20c ./HARDWARE/rs485.o
+ .debug_line    0x0000000000002422      0x1ca ./HARDWARE/led.o
+ .debug_line    0x00000000000025ec      0x28e ./HARDWARE/radio.o
+ .debug_line    0x000000000000287a      0x1d8 ./HARDWARE/usart.o
+ .debug_line    0x0000000000002a52      0x3ca ./HARDWARE/command.o
+ .debug_line    0x0000000000002e1c      0x3aa ./HARDWARE/move.o
+ .debug_line    0x00000000000031c6      0x285 ./HARDWARE/systick.o
+ .debug_line    0x000000000000344b      0x250 ./HARDWARE/spi_flash.o
+ .debug_line    0x000000000000369b      0x1eb ./HARDWARE/spi.o
+ .debug_line    0x0000000000003886      0x1e5 ./HARDWARE/encoder.o
+ .debug_line    0x0000000000003a6b      0x26d ./HARDWARE/calculate.o
+ .debug_line    0x0000000000003cd8      0x1f2 ./HARDWARE/adc.o
+ .debug_line    0x0000000000003eca      0x1d8 ./HARDWARE/wifi.o
+ .debug_line    0x00000000000040a2      0x520 ./HARDWARE/translate.o
+ .debug_line    0x00000000000045c2      0x2a7 ./HARDWARE/system_id.o
+ .debug_line    0x0000000000004869      0x2eb ./HARDWARE/system.o
+ .debug_line    0x0000000000004b54      0x32c ./HARDWARE/calibration.o
+ .debug_line    0x0000000000004e80       0x77 ./CORE/startup_stm32f10x_hd.o
 
-.debug_str      0x0000000000000000     0x364d
+.debug_str      0x0000000000000000     0x3665
  .debug_str     0x0000000000000000      0x2e5 ./SYSTEM/src/stm32f10x_exti.o
                                         0x33c (size before relaxing)
  .debug_str     0x00000000000002e5      0x385 ./SYSTEM/src/stm32f10x_gpio.o
@@ -1444,41 +1442,43 @@ OUTPUT(Target.elf elf32-littlearm)
                                         0x951 (size before relaxing)
  .debug_str     0x0000000000002c38      0x1a1 ./USER/stm32f10x_it.o
                                         0xbc2 (size before relaxing)
- .debug_str     0x0000000000002dd9       0x87 ./HARDWARE/rs485.o
+ .debug_str     0x0000000000002dd9       0x3e ./HARDWARE/itr.o
+                                        0x3ba (size before relaxing)
+ .debug_str     0x0000000000002e17       0x74 ./HARDWARE/rs485.o
                                         0x3fd (size before relaxing)
- .debug_str     0x0000000000002e60       0x18 ./HARDWARE/led.o
+ .debug_str     0x0000000000002e8b       0x18 ./HARDWARE/led.o
                                         0x2b8 (size before relaxing)
- .debug_str     0x0000000000002e78       0x47 ./HARDWARE/radio.o
+ .debug_str     0x0000000000002ea3       0x47 ./HARDWARE/radio.o
                                         0x8f5 (size before relaxing)
- .debug_str     0x0000000000002ebf       0x1c ./HARDWARE/usart.o
+ .debug_str     0x0000000000002eea       0x1c ./HARDWARE/usart.o
                                         0x39c (size before relaxing)
- .debug_str     0x0000000000002edb       0x8b ./HARDWARE/command.o
+ .debug_str     0x0000000000002f06       0x8b ./HARDWARE/command.o
                                         0x9b4 (size before relaxing)
- .debug_str     0x0000000000002f66       0x22 ./HARDWARE/move.o
+ .debug_str     0x0000000000002f91       0x22 ./HARDWARE/move.o
                                         0x932 (size before relaxing)
- .debug_str     0x0000000000002f88       0x33 ./HARDWARE/systick.o
+ .debug_str     0x0000000000002fb3       0x33 ./HARDWARE/systick.o
                                         0x8e7 (size before relaxing)
- .debug_str     0x0000000000002fbb       0x86 ./HARDWARE/spi_flash.o
+ .debug_str     0x0000000000002fe6       0x86 ./HARDWARE/spi_flash.o
                                         0x33d (size before relaxing)
- .debug_str     0x0000000000003041       0x40 ./HARDWARE/spi.o
+ .debug_str     0x000000000000306c       0x40 ./HARDWARE/spi.o
                                         0x403 (size before relaxing)
- .debug_str     0x0000000000003081       0x33 ./HARDWARE/encoder.o
+ .debug_str     0x00000000000030ac       0x20 ./HARDWARE/encoder.o
                                         0x3c2 (size before relaxing)
- .debug_str     0x00000000000030b4       0x2a ./HARDWARE/calculate.o
+ .debug_str     0x00000000000030cc       0x2a ./HARDWARE/calculate.o
                                         0x8c1 (size before relaxing)
- .debug_str     0x00000000000030de       0x32 ./HARDWARE/adc.o
+ .debug_str     0x00000000000030f6       0x32 ./HARDWARE/adc.o
                                         0x3c1 (size before relaxing)
- .debug_str     0x0000000000003110       0x1f ./HARDWARE/wifi.o
+ .debug_str     0x0000000000003128       0x1f ./HARDWARE/wifi.o
                                         0x39f (size before relaxing)
- .debug_str     0x000000000000312f       0x8e ./HARDWARE/translate.o
+ .debug_str     0x0000000000003147       0x8e ./HARDWARE/translate.o
                                         0x985 (size before relaxing)
- .debug_str     0x00000000000031bd       0x30 ./HARDWARE/system_id.o
+ .debug_str     0x00000000000031d5       0x30 ./HARDWARE/system_id.o
                                         0x936 (size before relaxing)
- .debug_str     0x00000000000031ed      0x3fb ./HARDWARE/system.o
+ .debug_str     0x0000000000003205      0x3fb ./HARDWARE/system.o
                                         0xd37 (size before relaxing)
- .debug_str     0x00000000000035e8       0x3a ./HARDWARE/calibration.o
+ .debug_str     0x0000000000003600       0x3a ./HARDWARE/calibration.o
                                         0x93a (size before relaxing)
- .debug_str     0x0000000000003622       0x2b ./CORE/startup_stm32f10x_hd.o
+ .debug_str     0x000000000000363a       0x2b ./CORE/startup_stm32f10x_hd.o
                                          0x50 (size before relaxing)
 
 .comment        0x0000000000000000       0x7e
@@ -1494,6 +1494,7 @@ OUTPUT(Target.elf elf32-littlearm)
  .comment       0x000000000000007e       0x7f ./USER/system_stm32f10x.o
  .comment       0x000000000000007e       0x7f ./USER/main.o
  .comment       0x000000000000007e       0x7f ./USER/stm32f10x_it.o
+ .comment       0x000000000000007e       0x7f ./HARDWARE/itr.o
  .comment       0x000000000000007e       0x7f ./HARDWARE/rs485.o
  .comment       0x000000000000007e       0x7f ./HARDWARE/led.o
  .comment       0x000000000000007e       0x7f ./HARDWARE/radio.o
@@ -1512,7 +1513,7 @@ OUTPUT(Target.elf elf32-littlearm)
  .comment       0x000000000000007e       0x7f ./HARDWARE/system.o
  .comment       0x000000000000007e       0x7f ./HARDWARE/calibration.o
 
-.debug_frame    0x0000000000000000     0x3214
+.debug_frame    0x0000000000000000     0x3248
  .debug_frame   0x0000000000000000      0x148 ./SYSTEM/src/stm32f10x_exti.o
  .debug_frame   0x0000000000000148      0x2d0 ./SYSTEM/src/stm32f10x_gpio.o
  .debug_frame   0x0000000000000418      0x4f4 ./SYSTEM/src/stm32f10x_rcc.o
@@ -1524,28 +1525,29 @@ OUTPUT(Target.elf elf32-littlearm)
  .debug_frame   0x00000000000025e4       0x98 ./USER/system_stm32f10x.o
  .debug_frame   0x000000000000267c       0x30 ./USER/main.o
  .debug_frame   0x00000000000026ac      0x210 ./USER/stm32f10x_it.o
- .debug_frame   0x00000000000028bc       0xa0 ./HARDWARE/rs485.o
- .debug_frame   0x000000000000295c       0x34 ./HARDWARE/led.o
- .debug_frame   0x0000000000002990       0xe0 ./HARDWARE/radio.o
- .debug_frame   0x0000000000002a70       0x34 ./HARDWARE/usart.o
- .debug_frame   0x0000000000002aa4       0xb0 ./HARDWARE/command.o
- .debug_frame   0x0000000000002b54       0x54 ./HARDWARE/move.o
- .debug_frame   0x0000000000002ba8       0x88 ./HARDWARE/systick.o
- .debug_frame   0x0000000000002c30       0xe8 ./HARDWARE/spi_flash.o
- .debug_frame   0x0000000000002d18       0x58 ./HARDWARE/spi.o
- .debug_frame   0x0000000000002d70       0x34 ./HARDWARE/encoder.o
- .debug_frame   0x0000000000002da4       0x60 ./HARDWARE/calculate.o
- .debug_frame   0x0000000000002e04       0x58 ./HARDWARE/adc.o
- .debug_frame   0x0000000000002e5c       0x34 ./HARDWARE/wifi.o
- .debug_frame   0x0000000000002e90      0x124 ./HARDWARE/translate.o
- .debug_frame   0x0000000000002fb4       0x4c ./HARDWARE/system_id.o
- .debug_frame   0x0000000000003000       0x74 ./HARDWARE/system.o
- .debug_frame   0x0000000000003074       0x38 ./HARDWARE/calibration.o
- .debug_frame   0x00000000000030ac       0x20 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strcpy.o)
- .debug_frame   0x00000000000030cc       0x28 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strncmp.o)
- .debug_frame   0x00000000000030f4       0xac /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x00000000000031a0       0x50 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00000000000031f0       0x24 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x00000000000028bc       0x34 ./HARDWARE/itr.o
+ .debug_frame   0x00000000000028f0       0xa0 ./HARDWARE/rs485.o
+ .debug_frame   0x0000000000002990       0x34 ./HARDWARE/led.o
+ .debug_frame   0x00000000000029c4       0xe0 ./HARDWARE/radio.o
+ .debug_frame   0x0000000000002aa4       0x34 ./HARDWARE/usart.o
+ .debug_frame   0x0000000000002ad8       0xb0 ./HARDWARE/command.o
+ .debug_frame   0x0000000000002b88       0x54 ./HARDWARE/move.o
+ .debug_frame   0x0000000000002bdc       0x88 ./HARDWARE/systick.o
+ .debug_frame   0x0000000000002c64       0xe8 ./HARDWARE/spi_flash.o
+ .debug_frame   0x0000000000002d4c       0x58 ./HARDWARE/spi.o
+ .debug_frame   0x0000000000002da4       0x34 ./HARDWARE/encoder.o
+ .debug_frame   0x0000000000002dd8       0x60 ./HARDWARE/calculate.o
+ .debug_frame   0x0000000000002e38       0x58 ./HARDWARE/adc.o
+ .debug_frame   0x0000000000002e90       0x34 ./HARDWARE/wifi.o
+ .debug_frame   0x0000000000002ec4      0x124 ./HARDWARE/translate.o
+ .debug_frame   0x0000000000002fe8       0x4c ./HARDWARE/system_id.o
+ .debug_frame   0x0000000000003034       0x74 ./HARDWARE/system.o
+ .debug_frame   0x00000000000030a8       0x38 ./HARDWARE/calibration.o
+ .debug_frame   0x00000000000030e0       0x20 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strcpy.o)
+ .debug_frame   0x0000000000003100       0x28 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-strncmp.o)
+ .debug_frame   0x0000000000003128       0xac /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00000000000031d4       0x50 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x0000000000003224       0x24 /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(_arm_fixunsdfsi.o)
 
 .debug_ranges   0x0000000000000000       0x20
  .debug_ranges  0x0000000000000000       0x20 ./CORE/startup_stm32f10x_hd.o
@@ -2488,7 +2490,6 @@ delay_ms                                          ./HARDWARE/systick.o
                                                   ./HARDWARE/autoscan.o
                                                   ./HARDWARE/move.o
                                                   ./HARDWARE/command.o
-                                                  ./USER/stm32f10x_it.o
                                                   ./USER/main.o
 delay_ns                                          ./HARDWARE/systick.o
 delay_us                                          ./HARDWARE/systick.o
@@ -2506,6 +2507,7 @@ exti_init                                         ./HARDWARE/exti.o
 g_pfnVectors                                      ./CORE/startup_stm32f10x_hd.o
 hardware_init_hook                                /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
 itr_init                                          ./HARDWARE/itr.o
+                                                  ./USER/main.o
 main                                              ./USER/main.o
                                                   ./CORE/startup_stm32f10x_hd.o
                                                   /opt/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o

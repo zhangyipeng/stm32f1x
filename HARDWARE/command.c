@@ -64,9 +64,9 @@ void CommandResolution(void){
         }
     }else if((strncmp(CmdRxBuffer,"#VERSION",8)==0)&&(CmdRxEnd==1)){              //版本查询命令#version
             if(WifiOrRs==0){
-                Usart_SendString(USART2,"$1.151CETC50\r\n");
+                Usart_SendString(USART2,"$1.00CETC50\r\n");
             }else{
-                Usart_SendString(USART1,"$1.151CETC50\r\n");
+                Usart_SendString(USART1,"$1.00CETC50\r\n");
             }
             SystemReset = 1;
     }else if((strncmp(CmdRxBuffer,"#SYSTEMID",9)==0)&&(CmdRxEnd==1)){              //版本查询命令#systemid

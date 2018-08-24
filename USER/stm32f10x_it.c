@@ -151,9 +151,15 @@ void EXTI9_5_IRQHandler(void){
     if(EXTI_GetITStatus(EXTI_Line8)==SET){//当光电开关被阻挡的时刻开始生效
     /* if(WheelMoveFlag){//修改为双边沿触发，只要中断已经触发，且校准指令生效 */
    		EXTI_ClearITPendingBit(EXTI_Line8);//清除EXTI线路挂起位
-		delay_ms(10);//消抖处理
+		/* delay_ms(10);//消抖处理 */
         if(WheelMoveNum<MoveLength){
             WheelMoveNum++;
+                if(GPIO_ReadOutputDataBit(GPIOA,GPIO_Pin_1)==Bit_RESET){//led灯熄灭
+                    GPIO_SetBits(GPIOA,GPIO_Pin_1);
+                }
+                else{
+                    GPIO_ResetBits(GPIOA,GPIO_Pin_1);//led灯发光
+                }
         }
         /* if(WheelMoveNum<MoveLength){ */
         /*     if((WheelMoveFlag==1)){	   //wheel按键按下且同时校准已经完成 */
@@ -177,18 +183,32 @@ void EXTI9_5_IRQHandler(void){
     }
 }
 void EXTI15_10_IRQHandler(void){
-    if(EXTI_GetITStatus(EXTI_Line11)==SET)
-	{
+    if(EXTI_GetITStatus(EXTI_Line11)==SET){//当光电开关被阻挡的时刻开始生效
+    /* if(WheelMoveFlag){//修改为双边沿触发，只要中断已经触发，且校准指令生效 */
    		EXTI_ClearITPendingBit(EXTI_Line11);//清除EXTI线路挂起位
-		delay_ms(10);//消抖处理
-		if((GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_11)==Bit_RESET))   //k_left按键按下
-		{
-			delay_ms(10);//消抖处理
-            WheelMoveNum = 0;
-            KeyFallFlag = 1;//KEY按下标志位
-		}
-		while(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_11)==0);
-	}
+		/* delay_ms(10);//消抖处理 */
+        if(WheelMoveNum<MoveLength){
+            WheelMoveNum++;
+                if(GPIO_ReadOutputDataBit(GPIOA,GPIO_Pin_1)==Bit_RESET){//led灯熄灭
+                    GPIO_SetBits(GPIOA,GPIO_Pin_1);
+                }
+                else{
+                    GPIO_ResetBits(GPIOA,GPIO_Pin_1);//led灯发光
+                }
+        }
+    }
+    /* if(EXTI_GetITStatus(EXTI_Line11)==SET) */
+	/* { */
+    /*        EXTI_ClearITPendingBit(EXTI_Line11);//清除EXTI线路挂起位 */
+	/*     delay_ms(10);//消抖处理 */
+	/*     if((GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_11)==Bit_RESET))   //k_left按键按下 */
+	/*     { */
+	/*         delay_ms(10);//消抖处理 */
+    /*         WheelMoveNum = 0; */
+    /*         KeyFallFlag = 1;//KEY按下标志位 */
+	/*     } */
+	/*     while(GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_11)==0); */
+	/* } */
 }
 void USART1_IRQHandler(void){                                               //RS232中断函数
     USART_ClearFlag(USART1,USART_FLAG_TC);

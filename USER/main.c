@@ -98,7 +98,7 @@ int main(void){
     /* rs485_init(); */
     adc_init();
     /* exti_init(); */
-    /* itr_init(); */
+    itr_init();
     /* time_init(); */
     SPIx_FLASH_Init();
     SPI1_FLASH_Init();
